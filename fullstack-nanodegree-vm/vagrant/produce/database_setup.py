@@ -16,4 +16,4 @@ class Produce(Base):
 class ProduceItem(Base):
 	__tablename__ = 'produceItem'
 	
-	name = column(String(80))
+	name = column(String(80), nullable = False)
