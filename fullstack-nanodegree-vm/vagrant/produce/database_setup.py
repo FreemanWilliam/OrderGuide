@@ -1,3 +1,3 @@
 import os
 import sys
-from sqlalchemy import Column
+from sqlalchemy import Column, ForeignKey
