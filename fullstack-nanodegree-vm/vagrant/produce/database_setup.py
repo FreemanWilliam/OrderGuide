@@ -19,4 +19,4 @@ class ProduceItem(Base):
 	name = column(String(80), nullable = False)
 	id = Column(Integer, primary_key = True)
 	description = Column(String(250))
-	price = Column()
+	price = Column(String(8))
