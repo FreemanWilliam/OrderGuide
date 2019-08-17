@@ -18,3 +18,4 @@ class ProduceItem(Base):
 	
 	name = column(String(80), nullable = False)
 	id = Column(Integer, primary_key = True)
+	description = Column()
