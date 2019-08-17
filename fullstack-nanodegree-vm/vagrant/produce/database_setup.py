@@ -25,3 +25,4 @@ class ProduceItem(Base):
 	produce = relationship(Produce)
 	
 engine = create_engine('sqlite:///producemenu.db')
+Base.metadata.create_all(engine)
