@@ -23,3 +23,5 @@ class ProduceItem(Base):
 	type = Column(String(50))
 	produce_id = Column(Integer, ForeignKey('produce.id')
 	produce = relationship(Produce)
+	
+engine = create_engine()
