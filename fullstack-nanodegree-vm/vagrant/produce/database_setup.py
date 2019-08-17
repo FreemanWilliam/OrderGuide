@@ -21,8 +21,9 @@ class ProduceItem(Base):
 	description = Column(String(250))
 	price = Column(String(8))
 	type = Column(String(50))
-	produce_id = Column(Integer, ForeignKey('produce.id')
+	produce_id = Column(Integer, ForeignKey('produce.id'))
 	produce = relationship(Produce)
+	
 	
 engine = create_engine('sqlite:///producemenu.db')
 Base.metadata.create_all(engine)
