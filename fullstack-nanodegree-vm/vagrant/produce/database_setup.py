@@ -17,4 +17,4 @@ class ProduceItem(Base):
 	__tablename__ = 'produceItem'
 	
 	name = column(String(80), nullable = False)
-	id = Column(Integer)
+	id = Column(Integer, primary_key = True)
