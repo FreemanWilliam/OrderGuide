@@ -24,4 +24,4 @@ class ProduceItem(Base):
 	produce_id = Column(Integer, ForeignKey('produce.id')
 	produce = relationship(Produce)
 	
-engine = create_engine()
+engine = create_engine('sqlite:///producemenu.db')
