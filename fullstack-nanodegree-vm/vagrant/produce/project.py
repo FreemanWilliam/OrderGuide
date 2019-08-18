@@ -14,7 +14,7 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 @app.route('/')
-@app.route('/produce')
+@app.route('/produce/<int:produce_id>/')
 def Produce():
 	return 'This is the Produce Function'
 
