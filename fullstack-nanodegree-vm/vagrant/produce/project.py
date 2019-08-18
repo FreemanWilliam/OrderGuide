@@ -11,6 +11,8 @@ Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
 
+session = DBSession()
+
 @app.route('/')
 @app.route('/produce')
 def Produce():
