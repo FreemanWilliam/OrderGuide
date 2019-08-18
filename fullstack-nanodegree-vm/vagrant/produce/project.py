@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from database_setup import Base
+from database_setup import Base, Produce
 
 @app.route('/')
 @app.route('/produce')
