@@ -15,7 +15,7 @@ session = DBSession()
 
 @app.route('/')
 @app.route('/produce/<int:produce_id>/')
-def Produce():
+def Produce(produce_id):
 	return 'This is the Produce Function'
 
 if __name__ == '__main__':
