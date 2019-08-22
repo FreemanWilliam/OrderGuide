@@ -16,6 +16,7 @@ session = DBSession()
 @app.route('/produce/<int:produce_id>/')
 def getProduce(produce_id):
 	produce = session.query(Produce).filter_by(id=produce_id).one()
+	items = session.query(ProduceItem).filter_by(produce_id=produce_id)
 	return 'This is the Produce Function'
 
 if __name__ == '__main__':
