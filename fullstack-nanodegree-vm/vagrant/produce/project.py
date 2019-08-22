@@ -17,7 +17,7 @@ session = DBSession()
 def getProduce(produce_id):
 	produce = session.query(Produce).filter_by(id=produce_id).one()
 	items = session.query(ProduceItem).filter_by(produce_id=produce_id)
-	return 'This is the Produce Function'
+	return render_template()
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=5000)
