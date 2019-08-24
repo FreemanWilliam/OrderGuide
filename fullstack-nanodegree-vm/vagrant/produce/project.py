@@ -16,7 +16,7 @@ session = DBSession()
 @app.route('/produce/<int:produce_id>/')
 def getProduce(produce_id):
 	produce = session.query(Produce).filter_by(id=produce_id).one()
-	items = session.query(ProduceItem).filter_by(produce_id=produce_id)
+	items = session.query(ProduceItem).filter_by(produce_id=produce_id).all()
 	return render_template('menu.html',produce=produce, items=items)
 
 if __name__ == '__main__':
