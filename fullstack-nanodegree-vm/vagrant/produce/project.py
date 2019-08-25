@@ -20,7 +20,7 @@ def getProduce(produce_id):
 	return render_template('menu.html',produce=produce, items=items)
 
 	
-@app.route('/produce/<int:produce_id>/new/')
+@app.route('/produce/<int:produce_id>/new/', methods=['GET'])
 def newMenuItem(produce_id):
 
 if __name__ == '__main__':
