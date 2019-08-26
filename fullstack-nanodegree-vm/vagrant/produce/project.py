@@ -22,6 +22,7 @@ def getProduce(produce_id):
 	
 @app.route('/produce/<int:produce_id>/new/', methods=['GET','POST'])
 def newMenuItem(produce_id):
+	return "Test"
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=5000)
