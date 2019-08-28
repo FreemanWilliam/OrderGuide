@@ -1,5 +1,6 @@
 {% extends "main.html" %}
-	
+
+{% block content %}	
 		<h1>{{produce.name}}</h1>
 		{% for i in items %}
 			{{i.name}}
@@ -8,4 +9,4 @@
 		</br>
 			{{i.price}}
 		{% endfor %}
-
+{% endblock %}
