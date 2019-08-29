@@ -22,6 +22,7 @@ def getProduce(produce_id):
 	
 @app.route('/produce/<int:produce_id>/new/', methods=['GET','POST'])
 def newMenuItem(produce_id):
+	if request.method == 'POST':
 	return "Test"
 
 if __name__ == '__main__':
