@@ -27,6 +27,8 @@ def newMenuItem(produce_id):
 		session.add(newItem)
 		session.commit()
 		return redirect(url_for('getProduce', produce_id=produce_id))
+	else:
+		
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=5000)
