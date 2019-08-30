@@ -1,6 +1,6 @@
 {% extends "main.html" %}
 {% block content %}	
-<a href = '{{url_for('newMenuItem', restaurant_id = restaurant.id) }}'>
+<a href = '{{url_for('newMenuItem', produce_id= produce.id) }}'>
 Create New Item</a>
 		<h1>{{produce.name}}</h1>
 		{% for i in items %}
