@@ -26,8 +26,7 @@ def newMenuItem(produce_id):
 		newItem = ProduceItem(name=request.form['name'],produce_id = produce_id)
 		session.add(newItem)
 		session.commit()
-	#	return redirect(url_for('getProduce', produce_id=produce_id))
-		return 'Yes'
+		return redirect(url_for('getProduce', produce_id=produce_id))		
 	else:
 		return render_template('newmenuitem.html',produce_id=produce_id)
 
