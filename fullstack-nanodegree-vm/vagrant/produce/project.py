@@ -23,9 +23,10 @@ def getProduce(produce_id):
 @app.route('/produce/<int:produce_id>/new/', methods=['GET','POST'])
 def newMenuItem(produce_id):
 	if request.method == 'POST':
-		newItem = ProduceItem(name=request.form['name'],id=request.form['id'],description=request.form['description'],produce_id = produce_id)
+		newItem = ProduceItem(name=request.form['name'],id=request.form['id'], \
+		description=request.form['description'],produce_id = produce_id)
 		session.add(newItem)
-		session.commit() #
+		session.commit() 
 		return redirect(url_for('getProduce', produce_id=produce_id))		
 	else:
 		return render_template('newmenuitem.html',produce_id=produce_id)
