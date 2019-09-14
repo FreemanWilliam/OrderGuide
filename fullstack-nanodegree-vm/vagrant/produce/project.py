@@ -24,7 +24,8 @@ def getProduce(produce_id):
 def newMenuItem(produce_id):
 	if request.method == 'POST':
 		newItem = ProduceItem(name=request.form['name'],id=request.form['id'], \
-		description=request.form['description'], price=request.form['price'],produce_id = produce_id)
+		description=request.form['description'], price=request.form['price'], \
+		,produce_id = produce_id)
 		session.add(newItem)
 		session.commit() 
 		return redirect(url_for('getProduce', produce_id=produce_id))		
